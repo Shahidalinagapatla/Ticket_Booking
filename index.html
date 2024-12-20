@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Booking System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Event Ticket Booking</h1>
+    </header>
+
+    <main>
+        <section class="event-selection">
+            <h2>Select an Event</h2>
+            <select id="eventDropdown">
+                <option value="">-- Select Event --</option>
+                <option value="concert">Concert</option>
+                <option value="play">Theater Play</option>
+                <option value="sports">Sports Event</option>
+            </select>
+        </section>
+
+        <section class="ticket-details" id="ticketDetails">
+            <h2>Ticket Details</h2>
+            <form id="ticketForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="quantity">Number of Tickets:</label>
+                <input type="number" id="quantity" name="quantity" min="1" max="10" required>
+
+                <button type="submit">Book Tickets</button>
+            </form>
+        </section>
+
+        <section class="confirmation" id="confirmation" hidden>
+            <h2>Booking Confirmation</h2>
+            <p id="confirmationMessage"></p>
+        </section>
+    </main>
+
+    <script src="bk.js"></script>
+</body>
+</html>
