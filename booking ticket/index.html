@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Booking System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Select an Event to Book</h1>
+        <div class="events">
+            <div class="event">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ84s9tTUFFpa53DLcpy6Nn3qOuvgkXwN5CQg&s.jpg" alt="Event 1" class="event-image">
+                <p>Event 1: Music Concert</p>
+                <button class="select-event" data-event="Music Concert">Select</button>
+            </div>
+            <div class="event">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8tHX1skSSHM6xDDh_U0LV2fgqcXQJOksA5A&s.jpg" alt="Event 2" class="event-image">
+                <p>Event 2: Therter play</p>
+                <button class="select-event" data-event="Art Exhibition">Select</button>
+            </div>
+            <div class="event">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl8IbZquUguOQUqHcZnzPogyfNyclOwTWeOg&s.jpg" alt="Event 3" class="event-image">
+                <p>Event 3: sports Events</p>
+                <button class="select-event" data-event="Tech Conference">Select</button>
+            </div>
+        </div>
+        <form id="bookingForm" style="display:none;">
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="tickets">Number of Tickets</label>
+                <input type="number" id="tickets" name="tickets" placeholder="Enter number of tickets" required min="1">
+            </div>
+            <div class="form-group">
+                <button type="submit">Book Now</button>
+            </div>
+        </form>
+        <div id="confirmationMessage" style="display:none; margin-top:20px;">
+            <p>Thank you for booking <span id="selectedEvent"></span>! A confirmation email has been sent to you.</p>
+        </div>
+    </div>
+
+    <script src="bk.js"></script>
+</body>
+</html>
